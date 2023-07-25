@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Recipient List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="recipient : ${recipients}">
+        <td th:text="${recipient.id}"></td>
+        <td th:text="${recipient.name}"></td>
+        <td th:text="${recipient.email}"></td>
+        <td> <a th:href="@{/showUpdate/{id}(id=${recipient.id})}" >Update</a></td>
+        <td> <a th:href="@{/deleteRecipent/{id}(id=${recipient.id})}" >Delete</a></td>
+    </tr>
+    </tbody>
+
+
+    <a href="addRecipient">ADDRECIPIENT</a>
+    <a href="sendmail">Compose Email</a>
+</table>
+</body>
+</html>
