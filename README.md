@@ -8,7 +8,7 @@ AutometedEmailMultiSender is a Spring Boot-based web application that facilitate
 Features:
 -------------------------
 - CRUD operations using Spring Boot for managing recipients.
-- Sending emails using the mail dependency in Spring Boot.
+- Sending emails using the gmail smtp properties in Spring Boot.
 - Storing recipient data in MySQL database using JPA repository.
 
 Prerequisites:
